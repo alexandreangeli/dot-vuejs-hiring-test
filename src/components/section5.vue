@@ -1,64 +1,97 @@
 <template>
   <div id="section-5">
-    <form class="section-5-form" @submit.prevent="formSubmit">
-      <fieldset>
-        <div class="section-5-form-group">
-          <label for="section-5-form-name">*Nome:</label>
-          <input
-            v-model="form.name"
-            type="text"
-            id="section-5-form-name"
-            name="name"
-            placeholder="Informe seu nome"
-            required
-          />
-        </div>
+    <validation-observer ref="validator" v-slot="{ handleSubmit }">
+      <form class="section-5-form" @submit.prevent="handleSubmit(formSubmit)">
+        <fieldset>
+          <validation-provider
+            v-slot="{ errors }"
+            name="nome"
+            vid="name"
+            rules="required"
+            class="section-5-form-group"
+          >
+            <label for="section-5-form-name">*Nome:</label>
+            <input
+              v-model="form.name"
+              type="text"
+              id="section-5-form-name"
+              name="name"
+              placeholder="Informe seu nome"
+            />
+            <div v-if="errors.length" class="section-5-form-group-error">
+              {{ errors[0] }}
+            </div>
+          </validation-provider>
 
-        <div class="section-5-form-group section-5-form-group-mail">
-          <label for="section-5-form-mail">*E-mail:</label>
-          <input
-            v-model="form.mail"
-            type="email"
-            id="section-5-form-mail"
-            name="mail"
-            placeholder="Informe seu e-mail"
-            required
-          />
-        </div>
+          <validation-provider
+            v-slot="{ errors }"
+            name="e-mail"
+            vid="mail"
+            rules="required|email"
+            class="section-5-form-group section-5-form-group-mail"
+          >
+            <label for="section-5-form-mail">*E-mail:</label>
+            <input
+              v-model="form.mail"
+              type="email"
+              id="section-5-form-mail"
+              name="mail"
+              placeholder="Informe seu e-mail"
+            />
+            <div v-if="errors.length" class="section-5-form-group-error">
+              {{ errors[0] }}
+            </div>
+          </validation-provider>
 
-        <div class="section-5-form-group section-5-form-group-phone">
-          <label for="section-5-form-phone">*Telefone:</label>
-          <input
-            v-model="form.phone"
-            type="tel"
-            id="section-5-form-phone"
-            name="phone"
-            placeholder="(__) ____-____"
-            @input="mask($event, 'phone')"
-            maxlength="16"
-            pattern="\([0-9]{2}\)[\s][0-9]?[\s]?[0-9]{4}-[0-9]{4}"
-            title="Digite um telefone válido"
-            required
-          />
-        </div>
+          <validation-provider
+            v-slot="{ errors }"
+            name="telefone"
+            vid="phone"
+            rules="required|min:14"
+            class="section-5-form-group section-5-form-group-phone"
+          >
+            <label for="section-5-form-phone">*Telefone:</label>
+            <input
+              v-model="form.phone"
+              type="tel"
+              id="section-5-form-phone"
+              name="phone"
+              placeholder="(__) ____-____"
+              v-mask="['(##) ####-####', '(##) #####-####']"
+              maxlength="15"
+              title="Digite um telefone válido"
+            />
+            <div v-if="errors.length" class="section-5-form-group-error">
+              {{ errors[0] }}
+            </div>
+          </validation-provider>
 
-        <div class="section-5-form-group section-5-form-group-message">
-          <label for="section-5-form-message">*Mensagem:</label>
-          <textarea
-            v-model="form.message"
-            type="text"
-            id="section-5-form-message"
-            name="message"
-            placeholder="Escreva aqui"
-            required
-          ></textarea>
-        </div>
-      </fieldset>
+          <validation-provider
+            v-slot="{ errors }"
+            name="mensagem"
+            vid="message"
+            rules="required"
+            class="section-5-form-group section-5-form-group-message"
+          >
+            <label for="section-5-form-message">*Mensagem:</label>
+            <textarea
+              v-model="form.message"
+              type="text"
+              id="section-5-form-message"
+              name="message"
+              placeholder="Escreva aqui"
+            ></textarea>
+            <div v-if="errors.length" class="section-5-form-group-error">
+              {{ errors[0] }}
+            </div>
+          </validation-provider>
+        </fieldset>
 
-      <div class="section-5-form-group-button-wrapper">
-        <button>ENVIAR</button>
-      </div>
-    </form>
+        <div class="section-5-form-group-button-wrapper">
+          <button>ENVIAR</button>
+        </div>
+      </form>
+    </validation-observer>
   </div>
 </template>
 
@@ -98,58 +131,7 @@ export default {
       `);
 
       this.form = { ...defaultForm };
-    },
-
-    mask(event, maskType) {
-      this.$nextTick(() => {
-        switch (maskType) {
-          case "phone":
-            event.target.value = this.phoneMask(event.target.value);
-            break;
-        }
-      });
-    },
-
-    phoneMask(value) {
-      let onlyNumbers = value.replace(/\D/g, "");
-      let masked = "";
-      for (var i = 0; i < onlyNumbers.length; i++) {
-        let char = onlyNumbers.charAt(i);
-
-        if (onlyNumbers.length < 11) {
-          switch (i) {
-            case 0:
-              masked += "(";
-              break;
-            case 2:
-              masked += ")";
-              masked += " ";
-              break;
-            case 6:
-              masked += "-";
-              break;
-          }
-        } else {
-          switch (i) {
-            case 0:
-              masked += "(";
-              break;
-            case 2:
-              masked += ")";
-              masked += " ";
-              break;
-            case 3:
-              masked += " ";
-              break;
-            case 7:
-              masked += "-";
-              break;
-          }
-        }
-
-        masked += char;
-      }
-      return masked;
+      this.$refs.validator.reset();
     },
   },
 };
@@ -214,6 +196,7 @@ export default {
   padding: 25px;
   box-sizing: border-box;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .section-5-form-group:not(:last-child) {
@@ -243,7 +226,6 @@ export default {
 
 .section-5-form-group input,
 .section-5-form-group textarea {
-  height: 100%;
   font-weight: 400;
   color: var(--white);
   font-size: 18px;
@@ -283,6 +265,7 @@ export default {
 }
 
 .section-5-form-group-button-wrapper button {
+  cursor: pointer;
   background-color: var(--white);
   color: var(--black);
   font-weight: 700;
@@ -292,5 +275,13 @@ export default {
   font-size: 18px;
   margin-top: 20px;
   outline: none;
+}
+
+.section-5-form-group-error {
+  padding-top: 2px;
+  color: red;
+  font-size: 14px;
+  width: 100%;
+  text-align: start;
 }
 </style>
