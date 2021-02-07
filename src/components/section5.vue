@@ -10,14 +10,16 @@
             rules="required"
             class="section-5-form-group"
           >
-            <label for="section-5-form-name">*Nome:</label>
-            <input
-              v-model="form.name"
-              type="text"
-              id="section-5-form-name"
-              name="name"
-              placeholder="Informe seu nome"
-            />
+            <div>
+              <label for="section-5-form-name">*Nome:</label>
+              <input
+                v-model="form.name"
+                type="text"
+                id="section-5-form-name"
+                name="name"
+                placeholder="Informe seu nome"
+              />
+            </div>
             <div v-if="errors.length" class="section-5-form-group-error">
               {{ errors[0] }}
             </div>
@@ -30,14 +32,16 @@
             rules="required|email"
             class="section-5-form-group section-5-form-group-mail"
           >
-            <label for="section-5-form-mail">*E-mail:</label>
-            <input
-              v-model="form.mail"
-              type="email"
-              id="section-5-form-mail"
-              name="mail"
-              placeholder="Informe seu e-mail"
-            />
+            <div>
+              <label for="section-5-form-mail">*E-mail:</label>
+              <input
+                v-model="form.mail"
+                type="email"
+                id="section-5-form-mail"
+                name="mail"
+                placeholder="Informe seu e-mail"
+              />
+            </div>
             <div v-if="errors.length" class="section-5-form-group-error">
               {{ errors[0] }}
             </div>
@@ -50,17 +54,19 @@
             rules="required|min:14"
             class="section-5-form-group section-5-form-group-phone"
           >
-            <label for="section-5-form-phone">*Telefone:</label>
-            <input
-              v-model="form.phone"
-              type="tel"
-              id="section-5-form-phone"
-              name="phone"
-              placeholder="(__) ____-____"
-              v-mask="['(##) ####-####', '(##) #####-####']"
-              maxlength="15"
-              title="Digite um telefone válido"
-            />
+            <div>
+              <label for="section-5-form-phone">*Telefone:</label>
+              <input
+                v-model="form.phone"
+                type="tel"
+                id="section-5-form-phone"
+                name="phone"
+                placeholder="(__) ____-____"
+                v-mask="['(##) ####-####', '(##) #####-####']"
+                maxlength="15"
+                title="Digite um telefone válido"
+              />
+            </div>
             <div v-if="errors.length" class="section-5-form-group-error">
               {{ errors[0] }}
             </div>
@@ -73,14 +79,16 @@
             rules="required"
             class="section-5-form-group section-5-form-group-message"
           >
-            <label for="section-5-form-message">*Mensagem:</label>
-            <textarea
-              v-model="form.message"
-              type="text"
-              id="section-5-form-message"
-              name="message"
-              placeholder="Escreva aqui"
-            ></textarea>
+            <div>
+              <label for="section-5-form-message">*Mensagem:</label>
+              <textarea
+                v-model="form.message"
+                type="text"
+                id="section-5-form-message"
+                name="message"
+                placeholder="Escreva aqui"
+              ></textarea>
+            </div>
             <div v-if="errors.length" class="section-5-form-group-error">
               {{ errors[0] }}
             </div>
@@ -216,6 +224,11 @@ export default {
   }
 }
 
+.section-5-form-group > div {
+  display: flex;
+  width: 100%;
+}
+
 .section-5-form-group label {
   font-weight: 700;
   color: var(--black);
@@ -231,7 +244,7 @@ export default {
   font-size: 18px;
   background-color: transparent;
   border: 0;
-  flex-grow: 1;
+  width: inherit;
   outline: none;
   caret-color: var(--black);
 }
@@ -278,7 +291,7 @@ export default {
 }
 
 .section-5-form-group-error {
-  padding-top: 2px;
+  padding-top: 5px;
   color: red;
   font-size: 14px;
   width: 100%;
