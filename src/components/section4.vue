@@ -13,12 +13,12 @@
           </div>
           <img
             class="section-4-accordion-item-header-down-arrow"
-            src="/assets/arrow-down-white.png"
+            src="img/arrow-down-white.png"
             @click="updateAccordion(index)"
           />
           <img
             class="section-4-accordion-item-header-up-arrow"
-            src="/assets/arrow-up-gray.png"
+            src="img/arrow-up-gray.png"
             @click="closeAccordion()"
           />
         </div>
@@ -44,7 +44,7 @@ export default {
         {
           title: "Lorem ipsum",
           content: `
-      <img class="section-4-accordion-item-body-img" src="./assets/bg-1.png"/>
+      <img class="section-4-accordion-item-body-img" src="img/bg-1.png"/>
       <p class="section-4-accordion-item-body-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
       </p>
@@ -53,7 +53,7 @@ export default {
         {
           title: "Lorem ipsum",
           content: `
-      <img class="section-4-accordion-item-body-img" src="./assets/bg-2.png"/>
+      <img class="section-4-accordion-item-body-img" src="img/bg-2.png"/>
       <p class="section-4-accordion-item-body-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
       </p>
@@ -62,7 +62,7 @@ export default {
         {
           title: "Lorem ipsum",
           content: `
-      <img class="section-4-accordion-item-body-img" src="./assets/bg-3.png"/>
+      <img class="section-4-accordion-item-body-img" src="img/bg-3.png"/>
       <p class="section-4-accordion-item-body-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
       </p>
@@ -71,7 +71,7 @@ export default {
         {
           title: "Lorem ipsum",
           content: `
-      <img class="section-4-accordion-item-body-img" src="./assets/bg-1.png"/>
+      <img class="section-4-accordion-item-body-img" src="img/bg-1.png"/>
       <p class="section-4-accordion-item-body-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
       </p>
@@ -80,7 +80,7 @@ export default {
         {
           title: "Lorem ipsum",
           content: `
-      <img class="section-4-accordion-item-body-img" src="./assets/bg-2.png"/>
+      <img class="section-4-accordion-item-body-img" src="img/bg-2.png"/>
       <p class="section-4-accordion-item-body-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
       </p>

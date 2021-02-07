@@ -5,7 +5,7 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit
     </p>
     <a href="#section-2">
-      <img class="section-1-arrow" src="assets/arrow-down-gray.png" />
+      <img class="section-1-arrow" src="img/arrow-down-gray.png" />
     </a>
     <div
       ref="section-1-carousel-container"
@@ -38,11 +38,7 @@ export default {
 
   data() {
     return {
-      section1CarouselItems: [
-        "/assets/bg-1.png",
-        "/assets/bg-2.png",
-        "/assets/bg-3.png",
-      ],
+      section1CarouselItems: ["img/bg-1.png", "img/bg-2.png", "img/bg-3.png"],
       activeIndex: 0,
     };
   },

@@ -2,7 +2,7 @@
   <div id="section-2">
     <img
       class="section-2-carousel-arrow section-2-carousel-arrow-left-white"
-      src="assets/arrow-left-white.png"
+      src="img/arrow-left-white.png"
       @click="previousSection2CarouselPage"
     />
     <div
@@ -31,7 +31,7 @@
     </div>
     <img
       class="section-2-carousel-arrow section-2-carousel-arrow-right-white"
-      src="assets/arrow-right-white.png"
+      src="img/arrow-right-white.png"
       @click="nextSection2CarouselPage"
     />
   </div>
@@ -48,55 +48,55 @@ export default {
       windowWidth: window.innerWidth,
       section2CarouselItems: [
         {
-          img: "assets/bg-1.png",
+          img: "img/bg-1.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
         },
         {
-          img: "assets/bg-2.png",
+          img: "img/bg-2.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
         },
         {
-          img: "assets/bg-3.png",
+          img: "img/bg-3.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
         },
         {
-          img: "assets/bg-3.png",
+          img: "img/bg-3.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
         },
         {
-          img: "assets/bg-1.png",
+          img: "img/bg-1.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
         },
         {
-          img: "assets/bg-2.png",
+          img: "img/bg-2.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
         },
         {
-          img: "assets/bg-2.png",
+          img: "img/bg-2.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
         },
         {
-          img: "assets/bg-3.png",
+          img: "img/bg-3.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
         },
         {
-          img: "assets/bg-1.png",
+          img: "img/bg-1.png",
           title: "LOREM IPSUM",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",

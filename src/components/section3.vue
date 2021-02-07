@@ -1,7 +1,7 @@
 <template>
   <div id="section-3">
     <div class="section-3-rounded-img-container">
-      <img class="section-3-rounded-img" src="assets/bg-1.png" />
+      <img class="section-3-rounded-img" src="img/bg-1.png" />
     </div>
 
     <div class="section-3-texts-container">
