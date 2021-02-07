@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 #section-3 {
   background-color: var(--gray-3);
   align-items: center;

@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 #section-6 {
   height: 90px;
   background-color: var(--gray-1);

@@ -145,7 +145,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 #section-5 {
   background: -webkit-gradient(
     linear,

@@ -102,7 +102,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 #section-4 {
   background-color: var(--gray-5);
   padding-top: 20px;

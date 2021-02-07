@@ -160,7 +160,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 #section-2 {
   padding-top: 20px;
   padding-bottom: 90px;

@@ -57,7 +57,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 #section-1 {
   position: relative;
   background-color: var(--gray-2);

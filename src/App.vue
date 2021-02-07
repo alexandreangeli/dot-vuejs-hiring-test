@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 :root {
   --black: #333333;
   --gray-1: #343434;
