@@ -153,7 +153,7 @@ export default {
 .section-4-accordion-item-header-title {
   margin: 0;
   font-weight: 700;
-  font-size: 24;
+  font-size: 24px;
   color: var(--white);
 }
 .section-4-accordion-item-active .section-4-accordion-item-header-title {
