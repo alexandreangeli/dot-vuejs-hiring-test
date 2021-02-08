@@ -189,10 +189,10 @@ export default {
 
 .section-5-form fieldset {
   all: unset;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
 }
 
 .section-5-form-group {
