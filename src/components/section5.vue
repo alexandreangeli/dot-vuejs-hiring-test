@@ -288,6 +288,7 @@ export default {
   font-size: 18px;
   margin-top: 20px;
   outline: none;
+  border: 0;
 }
 
 .section-5-form-group-error {
